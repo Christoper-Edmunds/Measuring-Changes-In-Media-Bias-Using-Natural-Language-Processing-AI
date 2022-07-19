@@ -1,0 +1,67 @@
+{% extends "base.html" %} {% block title %}Home Page{% endblock %}
+
+{% block content %} 
+
+
+<div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <body>
+    <canvas id="myChart" style="width:100%"></canvas>
+    
+    <script>
+      var verticalrowdata1 = {{ verticalrow1 | safe }};
+      var horizontalrowdata1 = {{ horizontalrow1 | safe}};
+      var namedata1 = '{{ name1 }}';
+
+      console.log(horizontalrowdata1)
+      console.log(verticalrowdata1)
+      const ctx = document.getElementById('myChart');
+      const myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: horizontalrowdata1,
+              datasets: [{
+                  label: namedata1,
+                  data: verticalrowdata1,
+                  borderWidth: 1,
+                  backgroundColor: "rgba(234, 35, 35, 1)",
+                  borderColor: "rgba(234, 35, 35, 1)",
+                  tension: 0.4
+              }]
+          },
+          options: {
+              responsive: true,
+              scales: {
+                  y: {
+                      min: -1.0,
+                      max: 1.0
+                    },
+                    }
+                }
+      });
+      </script>
+        
+</div>
+<div>
+    <form method="POST">
+        <h3 align="center">Data Entry</h3>
+        <div class="form-group">
+            <label for="KeyFigure1">Key Figure</label>
+            <input 
+                type="KeyFigure1" 
+                class="form-control" 
+                id="KeyFigure1" 
+                name="KeyFigure1" 
+                placeholder="Enter a named key figure here (person, organisation, group, place)">
+
+        </div>
+        <br />
+        <button type="submit" class="btn-primary">Submit</button>
+        
+    </form>
+
+</div>
+
+{% endblock %} 
+

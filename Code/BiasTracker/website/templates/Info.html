@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block title %}info page{% endblock %}
+
+{% block content %} 
+<h1>About this project</h1>
+
+<article>
+    <h2>Overview</h2>
+    <p>The goal of this project is to track changes in the sentiment of named key figures over time in the articles published by the BBC</p>
+
+    <h2>What do you mean by a key figure?</h2>
+    <p>By key figures we are referring to a specific subset of named entities including, People, Places, Organisations and "Groups" (E.g: Christians or Communists) </p>
+
+    <h2>How does this website work?</h2>
+    <p>The Website functions by following a few key steps</p>
+    <ul>
+        <li>The newest articles from the bbc are fetched via a webcrawler</li>
+        <li>The text is broken up into sentences which are cleaned up to remove junk</li>
+        <li>Each sentence has its sentiment appraised using the Textblob sentiment analysis model</li>
+        <li>Each sentence has its named entities processed using the Spacy NER model</li>
+        <li>The relevant named entity is selected from the possible choices based on type of entity and position in the sentence</li>
+        <li>The average sentiment for each key figure is averaged out across the article</li>
+        <li>Key figures with overlapping names (E.g "Coal" and "Jacob Coal" are combined together</li>
+        <li>All key figures sentiment averages are weighted up or down based on the overall sentiment of the article</li>
+        <li>The finalised sentiments, key figures and date of article are entered into the database</li>
+        <li>Finally, this website searches the database for matching named key figures to the one you select, and displays it on the graph</li>
+    </ul>
+
+    <h2>What technologies does this website make use of?</h2>
+    <p>The core technologies are, Python, Flask, Spacy, Textblob, Numpy, SQLite and BeautifulSoup</p>
+
+    <h2>What are the limitations of this website?</h2>
+    <p>The limitations of this website are quite significant, sentiment analysis is never 100% accurate and written language often follows complex and changing rules making 
+        objective assesment difficult, however as a tool to track generalised trends positive or negative, as well as provide insights about the general writing styles of media
+        this tool can be relatively useful. 
+    </p>
+
+    <h2>Who made this website?</h2>
+    <p>This website was built by Christopher Thomas Edmunds for The University of the West of England. He can be reached at crristopher@gmail.com</p>
+</article>
+{% endblock %} 
