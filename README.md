@@ -6,7 +6,7 @@ Specifically the tool processes every article posted to the BBC News website. Fi
 On the user end exists a web server where the user can view how the sentiment of a named entity has changed over time in a graph format. 
 
 #### Project being tested with "BBC" as a string showing how positve or negative the BBC has been about itself over time, -1 is very negative and 1 is very positive
-![Final Image of project being tested] (https://raw.githubusercontent.com/Christoper-Edmunds/Measuring-Changes-In-Media-Bias-Using-Natural-Language-Processing-AI/main/Documentation/unknown.png)
+![Final Image of project being tested](https://raw.githubusercontent.com/Christoper-Edmunds/Measuring-Changes-In-Media-Bias-Using-Natural-Language-Processing-AI/main/Documentation/unknown.png)
 
 
 ## Technologies Utilised
