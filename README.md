@@ -21,4 +21,4 @@ On the user end exists a web server where the user can view how the sentiment of
 
 ## Sentiment Analysis 
 - Spacy 
--TextBlob
+- TextBlob
