@@ -5,9 +5,9 @@ Specifically the tool processes every article posted to the BBC News website. Fi
 
 On the user end exists a web server where the user can view how the sentiment of a named entity has changed over time in a graph format. 
 
-##Technologies Utilised
+## Technologies Utilised
 
-###Web Server 
+### Web Server 
 - Flask
 - Chart.js
 - Bootstrap
@@ -15,10 +15,10 @@ On the user end exists a web server where the user can view how the sentiment of
 - SQLAlchemy
 - Python
 
-###Web Crawler
+### Web Crawler
 - BeautifulSoup
 - Requests
 
-##Sentiment Analysis 
+## Sentiment Analysis 
 - Spacy 
 -TextBlob
