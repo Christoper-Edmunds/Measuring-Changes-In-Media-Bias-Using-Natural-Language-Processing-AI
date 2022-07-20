@@ -27,6 +27,9 @@ On the user end exists a web server where the user can view how the sentiment of
 - Spacy 
 - TextBlob
 
+#### Component Based Engineering Structure 
+![Component Map](https://raw.githubusercontent.com/Christoper-Edmunds/Measuring-Changes-In-Media-Bias-Using-Natural-Language-Processing-AI/main/Documentation/ComponentBasedSoftwareEngineering.png)
+
 
 #### Whitebox design concept for a potential future version, potential future developments are well documented in the dissertation under the documentation folder
 ![whitebox design concept showing various additional features](https://raw.githubusercontent.com/Christoper-Edmunds/Measuring-Changes-In-Media-Bias-Using-Natural-Language-Processing-AI/main/Documentation/Whitebox%20Annotated.png)
